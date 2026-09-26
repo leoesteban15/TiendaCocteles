@@ -1,4 +1,7 @@
-body{
+body{ 
+    color: rgb(255, 255, 255);
+    min-height: 100vh;
+    background: linear-gradient(180deg, #272757 0%, #1a1a6e);
     font-family: Arial, sans-serif;
     margin: 0px;
 }
@@ -7,13 +10,17 @@ header{
     padding: 13px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 4px solid rgb(128, 62, 190);
+    box-shadow: 0 5px 5px #17174e;
 }
 
 .titulo{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.titulo h1{
+    font-size: 50px;
 }
 
 #contenedor-cocktails{
@@ -26,13 +33,16 @@ header{
 }
 
 .cocktailCard{
-    height: 230px;
+    background-color: #0F0E47;
+    height: 180px;
+    width: 230px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    gap: 3px;
     align-items: center;
-    width: 150px;
-    padding: 10px 0px;
-    border: 3px solid rgb(128, 62, 190);
+    justify-content:space-around;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .cocktailCard img{
@@ -40,5 +50,9 @@ header{
 }
 
 .cocktailCard h3 {
+    text-align: center;
+}
+
+.cocktailCard p {
     text-align: center;
 }

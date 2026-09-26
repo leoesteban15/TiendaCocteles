@@ -18,8 +18,11 @@ async function getData() {
       cocktailCard.classList.add("cocktailCard");
 
       cocktailCard.innerHTML = `
-        <h3>${cocktail.strDrink}</h3>
         <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
+        <div>
+          <p>${cocktail.strAlcoholic}</p>
+          <h3>${cocktail.strDrink}</h3>
+        </div>
       `;
 
       container.appendChild(cocktailCard);
