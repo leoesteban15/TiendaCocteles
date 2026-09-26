@@ -22,6 +22,7 @@ async function getData() {
         <div>
           <p>${cocktail.strAlcoholic}</p>
           <h3>${cocktail.strDrink}</h3>
+          <button>Comprar</button>
         </div>
       `;
 
