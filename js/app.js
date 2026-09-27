@@ -1,3 +1,11 @@
+let cart = [];
+let cocktails = [];
+
+if(localStorage.getItem("cart") != null){
+  cart = JSON.parse(localStorage.getItem("cart"));
+  console.log(cart);
+}
+
 async function getData() {
   try {
     const response = await fetch(
@@ -22,9 +30,18 @@ async function getData() {
         <div>
           <p>${cocktail.strAlcoholic}</p>
           <h3>${cocktail.strDrink}</h3>
-          <button>Comprar</button>
+          <button data-id = "${cocktail.idDrink}">Comprar</button>
         </div>
       `;
+
+      const buyButton = cocktailCard.querySelector("button");
+
+      // Añadir el cocktail a cart y subir el cart a LocalStorage
+      buyButton.addEventListener("click", () => {
+        cart.push(cocktail)
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log(cart);
+      })
 
       container.appendChild(cocktailCard);
     });
