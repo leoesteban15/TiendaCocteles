@@ -22,6 +22,7 @@ header{
 
 .titulo h1{
     font-size: 50px;
+    text-align: center;
 }
 
 #contenedor-cocktails{
@@ -45,8 +46,10 @@ header{
     align-items: center;
     justify-content:space-around;
     padding: 10px 40px;
-    box-shadow: 0 0 30px #5a5404;
+    box-shadow: 0 0 10px #534e05;
 }
+
+
 
 .cocktailCard div {
     display: flex;
@@ -71,11 +74,25 @@ header{
 }
 
 .cocktailCard button {
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     background-color:#c76306;
     box-shadow: 0 0 9px #c76306;
     border: none;
     padding: 10px 10px;
     cursor: pointer;
+}
+
+@media (max-width: 1000px){
+    .cocktailCard{
+        flex-direction: column;
+        width: 200px;
+        height: 350px;
+        gap: 20px;
+        padding: 35px;
+    }
+
+    .cocktailCard img{
+        width: 200px;
+    }
 }
